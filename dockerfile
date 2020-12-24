@@ -1,6 +1,3 @@
-FROM python:3.8.0-buster
-WORKDIR /app
-COPY requirements.txt
-RUN pip install -r requirements.txt
-COPY /app .
-CMD['python3.8', 'main.py']
+FROM python:3.7.5-slim
+RUN python3.7.5 --m pip install -r requirements.txt
+CMD['python3.7.5', 'main.py']
