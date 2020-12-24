@@ -1,13 +1,20 @@
 pipeline {
-    // available agent
-    agent {
-        docker { image 'docker run -p 5555:80 yyyaner/python:v1' }
-    }
+    agent any
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-		        sh 'python3.7.5 main.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
