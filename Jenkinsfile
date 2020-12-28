@@ -8,7 +8,7 @@ pipeline {
                 echo 'Building..'
 		        sh 'apt install python3-pip'
 		        sh 'pip3 install -r requirements.txt'
-		        sh 'python3 main.py
+		        sh 'python3 main.py'
             }
         }
         stage('Test') {
