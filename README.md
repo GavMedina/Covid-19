@@ -1,7 +1,7 @@
 # Covid-19
 
 Step 1: Download jenkins (via docker is the easiest way)  
-Step 2: Create a pipeline that will connect to this repo / clone this repo, and push it to your repo. This way you can connetק with jenkins to your private repo.
+Step 2: Create a pipeline that will connect to this repo / clone this repo, and push it to your repo. This way you can connete with jenkins to your private repo.
 Step 3: Build for the first time.  
 Step 4: You will see a new button in the job called 'Build with parameters' - it will open you 3 parametrs you could define - each will give you info accordingly this description.  
 
