@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+		    echo '${params.country}'
 		        sh 'apt -y install python3-pip'
 		        sh 'pip3 install -r requirements.txt'
 		        
