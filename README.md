@@ -1,6 +1,6 @@
 # Covid-19
 
-Step 1: Download jenkins (via docker the easiest way)  
+Step 1: Download jenkins (via docker is the easiest way)  
 Step 2: Create a pipeline that will connect to this repo and clone the files  
 Step 3: Build for the first time  
 Step 4: You will see a new button in the job called 'Build with parameters' - it will open you 3 parametrs you could define - each will give you info accordingly this description.  
