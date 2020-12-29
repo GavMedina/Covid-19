@@ -2,7 +2,12 @@
 pipeline {
     // available agent
     agent any
-    parameters {string(name: "country")}
+    parameters {
+        string(name: 'country', description: 'newCasesPeak'))
+        string(name: 'recoveredPeak', description: 'recoveredPeak')
+        string(name: 'deathsPeak', description: 'deathsPeak')
+        string(name: 'status', description: 'status')
+    }
     stages {
         stage("Build") {
             steps {
@@ -17,8 +22,9 @@ pipeline {
                 echo "testing"
                 sh "python3.6 main.py &"
                 sh "sleep 1"
-                sh "curl -s localhost:5555/newCasesPeak?country=${params.country}"
-		sh "sleep 1"
+                sh "if [ -z ${params.deathsPeak} ]; then curl localhost:5555/deathsPeak?country=${params.deathsPeak}; fi"
+                sh "curl localhost:5555/newCasesPeak?country=${params.country}"
+                
             }
         }
     }
