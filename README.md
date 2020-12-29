@@ -10,5 +10,5 @@ a. Declarative Checkout SCM
 b. Build - this will connect to the repo and clone the files  
 c. deathPeak - Returns the date (and value) of the highest peak of death Covid-19 cases in the last 30 days for a required country.  
 d. newCasesPeak - Returns the date (and value) of the highest peak of new Covid-19 cases in the last 30 days for a required country.  
-e. recoveredPeak - Returns the date (and value) of the highest peak of recovered Covid-19 cases in the last 30 days for the required country. 
+e. recoveredPeak - Returns the date (and value) of the highest peak of recovered Covid-19 cases in the last 30 days for the required country.  
 f. Status - Returns a value of success / fail to contact the backend API
