@@ -7,7 +7,7 @@ Step 4: At the second time, you will see a new button in the job called 'Build w
 
 You will see in the pipeline 6 stages:  
 a. Declarative Checkout SCM  
-b. Build - this will connect to the repo and clone the files  
+b. Build - for install requirments.
 c. deathPeak - Returns the date (and value) of the highest peak of death Covid-19 cases in the last 30 days for a required country.  
 d. newCasesPeak - Returns the date (and value) of the highest peak of new Covid-19 cases in the last 30 days for a required country.  
 e. recoveredPeak - Returns the date (and value) of the highest peak of recovered Covid-19 cases in the last 30 days for the required country.  
