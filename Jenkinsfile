@@ -1,27 +1,24 @@
 pipeline {
     // available agent
     agent any
-
+    parameters {string(name: 'country')}
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
 		        sh 'apt -y install python3-pip'
 		        sh 'pip3 install -r requirements.txt'
-		        sh 'python3.6 main.py'
+		        
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'testing'
+                sh 'python3.6 main.py &'
+                sh 'sleep 1'
+                sh 'curl -s localhost:5555/newCasesPeak?country=${params.country}'
             }
         }
     }
 }
-
 
