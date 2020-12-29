@@ -17,7 +17,7 @@ pipeline {
                 echo 'testing'
                 sh 'python3.6 main.py &'
                 sh 'sleep 1'
-                sh 'curl -s localhost:5555/newCasesPeak?country=${params.country}'
+                sh "curl -s localhost:5555/newCasesPeak?country=${params.country}"
             }
         }
     }
