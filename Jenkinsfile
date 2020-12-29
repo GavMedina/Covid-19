@@ -3,7 +3,7 @@ pipeline {
     // available agent
     agent any
     parameters {
-        string(name: 'country', description: 'newCasesPeak'))
+        string(name: 'country', description: 'newCasesPeak')
         string(name: 'recoveredPeak', description: 'recoveredPeak')
         string(name: 'deathsPeak', description: 'deathsPeak')
         string(name: 'status', description: 'status')
