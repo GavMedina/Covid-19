@@ -54,7 +54,7 @@ def recovered_peak():
     except Exception:
         return '{}'
     max_value, max_keys = find_peak(response_json)
-    return_value = dict(country=country, method='newCasesPeak', date=''.join(max_keys), value=max_value)
+    return_value = dict(country=country, method='recoveredPeak', date=''.join(max_keys), value=max_value)
     return f'{return_value}'
 
 
@@ -70,7 +70,7 @@ def deaths_peak():
     except Exception:
         return '{}'
     max_value, max_keys = find_peak(response_json)
-    return_value = dict(country=country, method='newCasesPeak', date=''.join(max_keys), value=max_value)
+    return_value = dict(country=country, method='deathsPeak', date=''.join(max_keys), value=max_value)
     return f'{return_value}'
 
 
