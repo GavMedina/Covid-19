@@ -18,17 +18,17 @@ pipeline {
             steps {
                 sh "python3.6 main.py &"
                 sh "sleep 1"
-                sh "curl localhost:5555/deathsPeak?country=${params.deathsPeak}"
+                sh "curl 'localhost:5555/deathsPeak?country=${params.deathsPeak}'"
             }
         }
         stage("newCasesPeak") {
             steps {
-                sh "curl localhost:5555/newCasesPeak?country=${params.newCasesPeak}"
+                sh "curl 'localhost:5555/newCasesPeak?country=${params.newCasesPeak}'"
             }
         }
         stage("recoveredPeak") {
             steps {
-                sh "curl localhost:5555/recoveredPeak?country=${params.recoveredPeak}"
+                sh "curl 'localhost:5555/recoveredPeak?country=${params.recoveredPeak}'"
             }
         }
         stage("Status") {
