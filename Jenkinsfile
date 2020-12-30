@@ -3,7 +3,7 @@ pipeline {
     // available agent
     agent any
     parameters {
-        string(name: 'country', description: 'Highest peak of new Covid19 in the last 30 days')
+        string(name: 'newCasesPeak', description: 'Highest peak of new Covid19 in the last 30 days')
         string(name: 'recoveredPeak', description: 'Highest peak of recovered Covid19 in the last 30 days')
         string(name: 'deathsPeak', description: 'Highest peak of deaths Covid19 in the last 30 days')
     }
@@ -23,7 +23,7 @@ pipeline {
         }
         stage("newCasesPeak") {
             steps {
-                sh "curl localhost:5555/newCasesPeak?country=${params.country}"
+                sh "curl localhost:5555/newCasesPeak?country=${params.newCasesPeak}"
             }
         }
         stage("recoveredPeak") {
